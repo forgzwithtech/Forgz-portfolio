@@ -1,0 +1,25 @@
+/* Lite mode: weak devices (or ones that start dropping frames). Same look, cheaper effects. */
+html[data-perf='lite'] .mesh i{animation:none}
+html[data-perf='lite'] .grain{display:none}
+html[data-perf='lite'] .obj,html[data-perf='lite'] .vid .tl::after{animation:none}
+html[data-perf='lite'] .obj.gfx svg{filter:none}
+html[data-perf='lite'] .shadow{filter:none}
+html[data-perf='lite'] .glare{display:none}
+html[data-perf='lite'] .scene{will-change:auto}
+html[data-perf='lite'] .fchip,
+html[data-perf='lite'] .step,
+html[data-perf='lite'] .visit,
+html[data-perf='lite'] .next,
+html[data-perf='lite'] .fan .you{-webkit-backdrop-filter:none;backdrop-filter:none;background-color:rgba(255,255,255,.94)}
+
+/* Loading: the page can't scroll until everything has arrived. */
+html.loading,html.loading body{overflow:hidden;height:100%}
+.hw.wait{animation:breathe 1.8s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.hw.wait{animation:none}}
+
+/* Touch: pages settle into place. Markers (see Track) sit at each chapter's resting position. */
+html.touch{scroll-snap-type:y proximity;overscroll-behavior-y:none}
+.track{position:relative}
+.snap{position:absolute;left:0;width:1px;height:1px;scroll-snap-align:start;scroll-snap-stop:normal;pointer-events:none}
+html{scrollbar-gutter:stable}

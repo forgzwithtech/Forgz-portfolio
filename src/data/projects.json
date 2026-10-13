@@ -1,0 +1,80 @@
+[
+  {
+    "id": "otakus-domain",
+    "device": "mac",
+    "wash": 0,
+    "category": "The proof · Community",
+    "title": "Otaku's Domain",
+    "blurb": "A community platform: a daily trial, a vault of drops, forums and live events.",
+    "url": "https://theotakusdomain.vercel.app/",
+    "page": {
+      "src": "od_page.jpg",
+      "w": 1600,
+      "h": 6501,
+      "sm": "od_page_m.jpg"
+    },
+    "nav": {
+      "src": "od_nav.jpg",
+      "w": 1600,
+      "h": 106
+    }
+  },
+  {
+    "id": "ik-phones",
+    "device": "mac",
+    "wash": 1,
+    "category": "The proof · E-commerce",
+    "title": "IK Phones",
+    "blurb": "A phone storefront with live stock, a trade-in flow and a valuation tool.",
+    "url": "https://ik-phone-platform-h5x3-khaki.vercel.app/",
+    "page": {
+      "src": "ik_page.jpg",
+      "w": 1600,
+      "h": 1917,
+      "sm": "ik_page_m.jpg"
+    },
+    "pill": {
+      "src": "ik_pill.png",
+      "w": 1000,
+      "h": 94,
+      "cw": 60.7,
+      "top": 0.95
+    },
+    "modal": {
+      "src": "ik_modal.jpg",
+      "w": 1500,
+      "h": 746,
+      "cw": 86,
+      "r": 2.3
+    }
+  },
+  {
+    "id": "superstore",
+    "device": "mac",
+    "wash": 2,
+    "category": "The proof · Platform",
+    "title": "Superstore",
+    "blurb": "Online ordering that lets a neighbourhood supermarket sell like a chain.",
+    "url": "https://super-store-o54f.vercel.app/",
+    "page": {
+      "src": "ss_page.jpg",
+      "w": 1600,
+      "h": 1944,
+      "sm": "ss_page_m.jpg"
+    },
+    "pill": {
+      "src": "ss_pill.png",
+      "w": 1000,
+      "h": 89,
+      "cw": 65,
+      "top": 1.5
+    },
+    "modal": {
+      "src": "ss_modal.jpg",
+      "w": 1400,
+      "h": 768,
+      "cw": 75.6,
+      "r": 1.6
+    }
+  }
+]

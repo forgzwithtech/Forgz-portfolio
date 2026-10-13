@@ -1,0 +1,25 @@
+/* Design tokens and the fixed keynote stage. Scenes crossfade through each other; the page is only a scroll track. */
+:root{
+  color-scheme: light;
+  --paper:#fbfbfd;
+  --ink:#1d1d1f;
+  --body:#424245;
+  --muted:#6e6e73;
+  --line:#d2d2d7;
+  --orange:#d9480f;
+  --btn:#0071e3;
+  --font:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Inter","Helvetica Neue",Arial,sans-serif;
+  --dw:600px;
+  --hh:clamp(150px,30vw,300px);
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.4;letter-spacing:-.011em;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,p{margin:0}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--btn);outline-offset:3px;border-radius:8px}
+.track{width:1px;pointer-events:none}
+.stage{position:fixed;inset:0;overflow:hidden;background:var(--paper)}
+.scene{position:absolute;inset:0;opacity:0;pointer-events:none;will-change:opacity,transform}
+.eyebrow{font-size:clamp(14px,1.3vw,18px);font-weight:600;color:var(--orange);letter-spacing:-.005em}
+.scene{z-index:1}

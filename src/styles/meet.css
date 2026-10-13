@@ -1,0 +1,25 @@
+/* Scene 2: portrait and intro. */
+/* meet */
+#s-meet{display:grid;place-items:center;padding:0 clamp(16px,6vw,96px)}
+.meet{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,6vw,96px);align-items:center;width:min(1180px,100%)}
+.portrait{position:relative;width:100%;aspect-ratio:4/5;border-radius:clamp(22px,2.6vw,36px);overflow:hidden;background:linear-gradient(170deg,#efeff3,#e4e4ea);box-shadow:0 40px 80px -30px rgba(0,0,0,.28),0 0 0 1px rgba(0,0,0,.04)}
+.portrait svg{position:absolute;left:50%;bottom:-2%;width:76%;transform:translateX(-50%)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform-origin:50% 40%}
+.upload{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);pointer-events:auto;display:inline-flex;gap:8px;align-items:center;background:var(--ink);color:#fff;border-radius:980px;padding:11px 20px;font-size:15px;font-weight:500;cursor:pointer;white-space:nowrap}
+.upload input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.mcopy{display:grid;gap:clamp(14px,2vh,24px);min-width:0}
+.mcopy h2{font-size:clamp(34px,5.4vw,78px);line-height:1.04;font-weight:700;letter-spacing:-.04em;text-wrap:balance}
+.mcopy p{font-size:clamp(17px,1.8vw,24px);line-height:1.36;color:var(--body);max-width:27em;letter-spacing:-.014em}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chips span{font-size:clamp(13px,1.1vw,15px);padding:7px 14px;border-radius:980px;background:#efeff3;color:var(--body)}
+@media (max-width:760px){
+  .meet{grid-template-columns:1fr;gap:20px;justify-items:center;text-align:center}
+  .portrait{justify-self:center;width:min(58vw,calc(40vh*.8))}
+  .mcopy{justify-items:center}
+  .chips{justify-content:center}
+  .mcopy h2{font-size:clamp(30px,8.4vw,44px)}
+}
+/* depth additions */
+.bigname{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(120px,28vw,440px);line-height:.8;font-weight:800;letter-spacing:-.06em;white-space:nowrap;background:linear-gradient(100deg,rgba(59,130,246,.16),rgba(139,92,246,.18) 50%,rgba(255,122,69,.2));-webkit-background-clip:text;background-clip:text;color:transparent;pointer-events:none;will-change:transform}
+.pwrap{position:relative;justify-self:end;perspective:1100px;width:min(100%,calc(74vh*.8))}
+.fchip{position:absolute;z-index:3;padding:10px 16px;border-radius:99px;background:rgba(255,255,255,.74);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);box-shadow:0 14px 34px -10px rgba(40,30,90,.3),0 0 0 1px rgba(255,255,255,.8);font-size:clamp(12px,1.15vw,16px);font-weight:600;white-space:nowrap;will-change:transform}

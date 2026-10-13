@@ -1,0 +1,20 @@
+/* Scene 5: the work world (camera, cells, captions). */
+/* work */
+.wash{position:absolute;inset:0;opacity:0}
+.spot{position:absolute;inset:0;background:radial-gradient(ellipse 52% 44% at 50% 58%,rgba(255,255,255,.95),rgba(255,255,255,0) 70%)}
+.world{will-change:transform}
+.world{position:absolute;left:0;top:0;transform-origin:0 0}
+.cell{position:absolute;top:0}
+.laptop{position:absolute;left:50%;top:56%;width:var(--dw);transform:translate(-50%,-50%);perspective:calc(var(--dw)*2.4)}
+.screen{position:relative;overflow:hidden;aspect-ratio:16/10;border-radius:calc(var(--dw)*.006);background:#000;container-type:inline-size}
+.page{width:100%;will-change:transform}
+.shot{display:block;width:100%;height:auto}
+.glare{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.2) 0%,rgba(255,255,255,0) 34%,rgba(255,255,255,0) 62%,rgba(255,255,255,.07) 100%);z-index:5}
+.navimg{position:absolute;left:0;top:0;width:100%;height:auto;z-index:2}
+.pillimg{position:absolute;left:50%;transform:translateX(-50%);height:auto;z-index:2;opacity:0}
+.dim{position:absolute;inset:0;background:rgba(10,10,14,.42);opacity:0;z-index:3}
+.modal{position:absolute;left:50%;top:50%;height:auto;z-index:4;opacity:0;box-shadow:0 3cqw 8cqw rgba(0,0,0,.45)}
+.shadow{position:absolute;left:-4%;width:108%;top:calc(100% + var(--dw)*.012);height:calc(var(--dw)*.07);background:radial-gradient(ellipse at 50% 30%,rgba(0,0,0,.3),rgba(0,0,0,0) 68%);filter:blur(calc(var(--dw)*.008))}
+.cap{position:absolute;left:50%;bottom:calc(100% + var(--dw)*.05);transform:translateX(-50%);width:max(100%,min(92vw,30rem));text-align:center;display:grid;justify-items:center;gap:6px}
+.cap h3{font-size:clamp(30px,min(4.6vw,6.6vh),64px);line-height:1.05;font-weight:700;letter-spacing:-.035em}
+.blurb{font-size:clamp(16px,min(1.8vw,2.5vh),23px);line-height:1.3;color:var(--body);letter-spacing:-.012em;text-wrap:balance;max-width:28em}

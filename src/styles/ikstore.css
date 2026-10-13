@@ -1,0 +1,56 @@
+/* The responsive IK Phones demo layout shown inside every device. Uses container queries so it reflows to the screen it sits in. */
+.vp{position:relative;width:100px;font-family:"Space Grotesk","Inter",system-ui,sans-serif;background:#f7f7f9;color:#141416;container-type:inline-size;transform-origin:0 0;letter-spacing:-.01em;line-height:1.25}
+.vp *{box-sizing:border-box;margin:0}
+.vp img{display:block;width:100%;height:100%;object-fit:cover}
+.vp .n{display:flex;align-items:center;gap:16px;margin:14px 16px 0;padding:10px 12px 10px 14px;background:rgba(255,255,255,.9);border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.07)}
+.vp .logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:17px;margin-right:auto}
+.vp .logo i{font-style:normal;background:#141416;color:#fff;border-radius:8px;padding:6px 7px;font-size:13px}
+.vp .links{display:none;gap:24px;font-size:14px;color:#6b6b73;margin-right:auto}
+.vp .bag{font-style:normal;font-size:14px;font-weight:600;background:#f0f0f3;border-radius:999px;padding:8px 14px}
+.vp .bag u{background:#0a84ff;color:#fff;text-decoration:none;border-radius:99px;padding:1px 7px;font-size:12px;margin-left:6px}
+.vp .h{display:grid;gap:28px;padding:36px 20px 20px}
+.vp .eb{font:600 12px ui-monospace,Menlo,monospace;color:#f26a1b;letter-spacing:.08em}
+.vp h1{font-size:58px;line-height:.98;letter-spacing:-.045em;font-weight:700;margin:14px 0}
+.vp h1 i{font-style:normal;color:#ff6a13}
+.vp .sub{color:#6b6b73;font-size:17px}
+.vp .bt{display:flex;gap:10px;margin-top:22px}
+.vp .b1{background:#141416;color:#fff;border-radius:99px;padding:14px 22px;font-weight:600;font-size:15px}
+.vp .b2{background:#fff;border-radius:99px;padding:14px 22px;font-weight:600;font-size:15px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.vp .ph{background:#fff;border-radius:28px;overflow:hidden;aspect-ratio:1/1.05;box-shadow:0 20px 50px rgba(0,0,0,.08);align-self:center}
+.vp .f{padding:44px 20px 12px;text-align:center}
+.vp h2{font-size:36px;letter-spacing:-.035em;line-height:1.05}
+.vp .f>p{color:#6b6b73;margin-top:8px;font-size:16px}
+.vp .g{display:grid;gap:14px;margin-top:26px;text-align:left}
+.vp .c{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.vp .im{position:relative;aspect-ratio:4/3;background:#111}
+.vp .im em{position:absolute;top:12px;right:12px;font:600 11px ui-monospace,Menlo,monospace;letter-spacing:.06em;background:rgba(255,255,255,.88);border-radius:99px;padding:5px 10px;font-style:normal}
+.vp .im em.o{background:#ff8a1f;color:#fff}
+.vp .bd{padding:16px 18px 18px;display:grid;gap:4px}
+.vp .bd h3{font-size:20px;letter-spacing:-.02em}
+.vp .bd small{color:#8a8a92;font:500 12px ui-monospace,Menlo,monospace}
+.vp .bd p{font-size:13px;color:#2e9e57;margin-top:8px}
+.vp .tr{margin:26px 20px 0;padding:34px 24px;border-radius:26px;background:#141416;color:#fff;display:grid;gap:10px;justify-items:start}
+.vp .tr h2{font-size:30px}
+.vp .tr p{color:#b4b4bb;font-size:16px}
+.vp .b3{background:#ff6a13;color:#fff;border-radius:99px;padding:13px 22px;font-weight:600;font-size:15px;margin-top:8px}
+.vp footer{padding:30px 20px 40px;text-align:center;color:#8a8a92;font-size:13px}
+@container (min-width:560px){
+  .vp .h{grid-template-columns:1.1fr 1fr;align-items:center;gap:36px;padding:56px 32px 24px}
+  .vp h1{font-size:74px}
+  .vp .g{grid-template-columns:1fr 1fr}
+  .vp .g .c:first-child{grid-column:1/-1}
+  .vp .g .c:first-child .im{aspect-ratio:21/9}
+  .vp .f{padding:60px 32px 12px}
+  .vp .tr{margin:30px 32px 0}
+}
+@container (min-width:900px){
+  .vp .links{display:flex}
+  .vp .n{margin:18px 40px 0}
+  .vp .h{padding:72px 56px 32px;gap:56px}
+  .vp h1{font-size:96px}
+  .vp .g{grid-template-columns:repeat(3,1fr);padding:0 24px}
+  .vp .g .c:first-child{grid-column:auto}
+  .vp .g .c:first-child .im{aspect-ratio:4/3}
+  .vp .tr{margin:40px 56px 0;grid-template-columns:1fr auto;align-items:center}
+  .vp .tr .b3{margin:0}
+}

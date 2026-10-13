@@ -1,0 +1,47 @@
+/* Device mockups built from real photographs. Screens are live DOM warped into each photo with matrix3d. */
+.page{overflow:visible}
+.crease{position:absolute;left:50%;top:0;bottom:0;width:calc(var(--dw)*.05);transform:translateX(-50%);z-index:4;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,0),rgba(0,0,0,.09) 44%,rgba(255,255,255,.16) 50%,rgba(0,0,0,.07) 56%,rgba(0,0,0,0))}
+.isl,.hole{position:absolute;z-index:6;background:#000;border-radius:50%;aspect-ratio:auto}
+.hole{aspect-ratio:1}
+.fw{position:relative;perspective:calc(var(--dw)*2.4)}
+.half{position:relative}
+.hl{clip-path:inset(0 50% 0 0)}
+.hr{position:absolute;inset:0;transform-origin:50% 50%;transform-style:preserve-3d}
+.hr .front{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;clip-path:inset(0 0 0 50%)}
+.fw.one .hl{clip-path:none}
+.lid.pd{position:relative;transform-origin:50% 100%}
+.base.pd{position:relative;width:100%;z-index:2;margin-top:-1px}
+.pd{position:relative;width:100%;line-height:0}
+.pd>.pimg{display:block;width:100%;height:auto;position:relative;z-index:3;pointer-events:none;user-select:none;-webkit-user-drag:none}
+.pscr{position:absolute;left:0;top:0;transform-origin:0 0;z-index:1}
+.pscr .screen{width:100%;height:100%;aspect-ratio:auto;border-radius:0;background:#fff}
+.screen .isl{left:50%;top:2.6cqw;width:29cqw;height:8.6cqw;border-radius:99px;transform:translateX(-50%)}
+.screen .hole{left:50%;top:2.8cqw;width:3.8cqw;transform:translateX(-50%);box-shadow:none}
+.screen .notch{position:absolute;z-index:6;left:50%;top:0;width:10cqw;height:1.9cqw;transform:translateX(-50%);background:#000;border-radius:0 0 1cqw 1cqw}
+.hr .plate{position:absolute;top:0;bottom:0;left:50%;width:50%;transform:rotateY(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:0 2.5% 2.5% 0/0 3% 3% 0;background:linear-gradient(140deg,var(--pc),color-mix(in srgb,var(--pc) 72%,#000));box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+
+.od{position:relative;box-sizing:border-box;width:100%;aspect-ratio:var(--oar);background:#0b0b0e;border:calc(var(--dw)*.007) solid var(--pc);border-radius:calc(var(--dw)*.012)}
+.od .screen{position:absolute;inset:calc(var(--dw)*.011);width:auto;height:auto;aspect-ratio:auto;border-radius:calc(var(--dw)*.004)}
+.screen .hole.r{left:auto;right:2.4cqw;top:2.4cqw;transform:none;width:1.9cqw}
+.hr .plate.ph{border-radius:0;box-shadow:none;background-repeat:no-repeat;background-size:200% 100%;background-position:0 0}
+
+.lap3{position:relative;width:100%;transform-style:preserve-3d}
+.lap3.o{transform-style:flat}
+.lap3 .pivot{position:absolute;transform-origin:50% 100%;transform-style:preserve-3d;z-index:1}
+.lap3.o .pivot{transform-style:flat}
+.lap3 .lid.pd{backface-visibility:hidden;-webkit-backface-visibility:hidden;position:absolute;left:0;top:0;width:100%}
+.lap3 .lback{position:absolute;transform:rotateY(180deg) rotateZ(180deg);backface-visibility:hidden;-webkit-backface-visibility:hidden;background-size:100% 100%;background-repeat:no-repeat}
+.lap3.o .lback,.lap3.o .deck{display:none}
+.lap3 .deck{position:absolute;left:0;width:100%;transform-origin:50% 0;background:linear-gradient(#dcdde1,#c9cacf);border-radius:1.5%;overflow:hidden}
+.lap3 .deck::before{content:"";position:absolute;left:7%;right:7%;top:8%;height:50%;border-radius:2%;background:repeating-linear-gradient(90deg,transparent 0 5.6%,#141518 5.6% 6.2%),repeating-linear-gradient(0deg,transparent 0 24%,#141518 24% 26%),linear-gradient(#34353a,#2a2b2f);box-shadow:inset 0 0 0 2px #17181b}
+.lap3 .deck::after{content:"";position:absolute;left:36%;right:36%;bottom:6%;height:20%;border-radius:4%;background:linear-gradient(#d3d4d8,#c4c5ca);box-shadow:inset 0 0 0 1px #b4b5ba}
+.lap3 .base.pd{position:absolute;left:0;width:100%;margin:0;z-index:2}
+/* ---- googlebook ---- */
+.gbw{position:relative;width:100%}
+.gbw>div{position:absolute;left:0;top:0;width:100%;height:100%}
+.gbw .pimg{display:block;width:100%;height:100%}
+.gbw .glid{transform-origin:0 0}
+.gbw .glid>.pimg{position:relative;z-index:3;pointer-events:none}
+.gbw .gbtex{position:absolute;left:0;top:0;width:1000px;height:654px;transform-origin:0 0;background-size:100% 100%;background-repeat:no-repeat}
+.gbw .gback{visibility:hidden}
+.shadow{position:absolute;left:-4%;width:108%;top:calc(100% + var(--dw)*.012);height:calc(var(--dw)*.07);background:radial-gradient(ellipse at 50% 30%,rgba(0,0,0,.3),rgba(0,0,0,0) 68%);filter:blur(calc(var(--dw)*.008));pointer-events:none}

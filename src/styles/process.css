@@ -1,0 +1,16 @@
+/* Scene 6: how we work. */
+#s-process{display:grid;place-items:center;align-content:center;gap:clamp(24px,5vh,56px);padding:0 clamp(16px,5vw,80px)}
+#s-process h2{font-size:clamp(34px,5.6vw,84px);line-height:1.02;font-weight:700;letter-spacing:-.045em;text-align:center;text-wrap:balance}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px);width:min(1180px,100%)}
+.step{display:grid;gap:10px;padding:clamp(20px,2.4vw,34px);border-radius:clamp(20px,2.4vw,32px);background:rgba(255,255,255,.72);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 24px 60px -24px rgba(40,30,90,.25),0 0 0 1px rgba(255,255,255,.7)}
+.step b{font:600 14px ui-monospace,Menlo,monospace;color:var(--orange);letter-spacing:.06em}
+.step h3{font-size:clamp(26px,3vw,42px);line-height:1.05;letter-spacing:-.035em}
+.step p{font-size:clamp(15px,1.4vw,19px);line-height:1.4;color:var(--body)}
+@media (max-width:760px){.steps{grid-template-columns:1fr;gap:10px}.step{padding:16px 18px;gap:4px}.step h3{font-size:24px}.step p{font-size:15px}}
+.steps{position:relative;padding-top:18px}
+.pline{position:absolute;top:18px;left:16.66%;right:16.66%;height:3px;border-radius:3px;background:rgba(0,0,0,.08)}
+.pline i{position:absolute;inset:0;border-radius:3px;background:linear-gradient(90deg,#3b82f6,#8b5cf6,#ff7a45);transform-origin:0 50%;transform:scaleX(0)}
+.node{position:absolute;top:-24px;left:50%;width:22px;height:22px;margin-left:-11px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(0,0,0,.08);transition:background .4s,transform .4s,box-shadow .4s;z-index:2}
+.node.on{background:linear-gradient(135deg,#3b82f6,#8b5cf6);transform:scale(1.25);box-shadow:0 0 0 6px rgba(139,92,246,.22)}
+.step{position:relative;margin-top:14px}
+@media (max-width:760px){.pline,.node{display:none}.steps{padding-top:0}.step{margin-top:0}}

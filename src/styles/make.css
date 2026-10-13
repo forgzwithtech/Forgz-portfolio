@@ -1,0 +1,29 @@
+/* Scene 4: what we make, with floating glass objects. */
+.mk b{background:linear-gradient(100deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.08em}
+.obj{position:absolute;left:50%;top:50%;z-index:0;pointer-events:none;transform:translate(-50%,-50%) translateX(var(--ox)) perspective(1400px) rotateY(var(--ry)) rotateX(6deg);animation:flo 7s ease-in-out infinite alternate}
+@keyframes flo{0%{margin-top:-8px}100%{margin-top:10px}}
+@media (prefers-reduced-motion:reduce){.obj{animation:none}}
+.mk>b,.mk>span{position:relative;z-index:2}
+.obj.web{width:clamp(220px,34vw,520px);aspect-ratio:16/10;border-radius:18px;background:rgba(255,255,255,.88);box-shadow:0 40px 90px -30px rgba(59,60,160,.45),0 0 0 1px rgba(255,255,255,.9);--ox:24vw;--ry:-18deg;overflow:hidden}
+.web .wbar{display:flex;gap:6px;padding:10px 12px;background:rgba(0,0,0,.04)}.web .wbar i{width:9px;height:9px;border-radius:50%;background:#d0d0d8}
+.web .blk{position:absolute;border-radius:10px}.web .b1{left:6%;top:22%;width:50%;height:16%;background:linear-gradient(90deg,#3b82f6,#8b5cf6)}.web .b2{left:6%;top:44%;width:34%;height:9%;background:#e2e2ea}.web .b3{right:6%;top:22%;width:30%;height:56%;background:linear-gradient(160deg,#c4b5fd,#93c5fd)}
+.obj.app{width:clamp(110px,15vw,220px);aspect-ratio:9/18.5;border-radius:clamp(18px,2.4vw,34px);background:#0c0c10;padding:7px;box-shadow:0 40px 90px -30px rgba(220,80,60,.45),0 0 0 2px #cfcfd4;--ox:-26vw;--ry:16deg}
+.app .in{width:100%;height:100%;border-radius:inherit;background:linear-gradient(170deg,#fff6ef,#ffe0d0);padding:20% 10% 8%;display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:min-content;gap:12%;align-content:start}
+.app .in i{aspect-ratio:1;border-radius:26%}
+.obj.gfx{width:clamp(200px,28vw,420px);aspect-ratio:1.2;--ox:24vw;--ry:-14deg}
+.obj.gfx svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 30px 40px rgba(180,60,140,.3))}
+.obj.vid{width:clamp(220px,32vw,480px);aspect-ratio:16/9;border-radius:18px;background:linear-gradient(135deg,#34d399,#3b82f6);box-shadow:0 40px 90px -30px rgba(20,120,120,.5);--ox:-24vw;--ry:16deg;overflow:hidden}
+.vid .pl{position:absolute;left:50%;top:46%;width:18%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:rgba(255,255,255,.9);display:grid;place-items:center}
+.vid .pl::after{content:"";border-left:14px solid #10b981;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.vid .tl{position:absolute;left:6%;right:6%;bottom:9%;height:5px;border-radius:5px;background:rgba(255,255,255,.4)}
+.vid .tl::after{content:"";position:absolute;left:0;top:0;bottom:0;width:40%;border-radius:5px;background:#fff;animation:scrub 4s ease-in-out infinite alternate}
+@keyframes scrub{0%{width:8%}100%{width:84%}}
+@media (max-width:760px){.obj{top:26%;opacity:.55;--ox:0vw!important}}
+/* make */
+#s-make{display:grid;place-items:center}
+.mk-top{position:absolute;left:0;right:0;top:calc(50% - min(24vw,22vh) - 44px);text-align:center}
+.mk-wash{position:absolute;inset:0;opacity:0}
+.mk{position:absolute;left:0;right:0;top:50%;display:grid;justify-items:center;gap:clamp(14px,2.4vw,30px);text-align:center;padding:0 16px;opacity:0;transform:translateY(-50%)}
+.mk b{font-size:clamp(52px,15.5vw,250px);line-height:.95;font-weight:700;letter-spacing:-.055em;white-space:nowrap}
+.mk b.sm{font-size:clamp(44px,12vw,200px)}
+.mk span{font-size:clamp(16px,2vw,28px);color:var(--muted);letter-spacing:-.015em}

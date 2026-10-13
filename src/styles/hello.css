@@ -1,0 +1,12 @@
+/* Scene 1: handwritten Hello then Forgz here. */
+/* hello */
+#s-hello{display:grid;place-items:center}
+.hello{display:grid;justify-items:center;align-items:center;height:var(--hh);max-width:calc(100% - 32px)}
+.hw{grid-area:1/1;height:var(--hh);width:auto;max-width:100%;overflow:visible;transition:opacity .3s}
+.hw.off{opacity:0}
+.hw path{fill:none;stroke:var(--ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.cue{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 34px);transform:translateX(-50%);display:grid;justify-items:center;gap:8px;font-size:13px;color:var(--muted);letter-spacing:.02em;opacity:0;transition:opacity 1s}
+.cue.in{opacity:1}
+.cue i{width:1px;height:34px;background:linear-gradient(var(--muted),transparent);transform-origin:50% 0;animation:drip 1.8s ease-in-out infinite}
+@keyframes drip{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+@media (prefers-reduced-motion:reduce){.cue i{animation:none}}

@@ -1,0 +1,8 @@
+[
+  { "id": "ios-phone", "device": "ios", "wash": 3, "category": "Every screen · Phone", "title": "iOS phone", "blurb": "Built for every screen your customers hold. One column, thumb-sized buttons." },
+  { "id": "android-phone", "device": "and", "wash": 4, "category": "Every screen · Phone", "title": "Android phone", "blurb": "The same store on Android, edge to edge and just as fast." },
+  { "id": "ios-foldable", "device": "duo", "wash": 0, "fold": true, "category": "Every screen · Foldable", "title": "iOS foldable", "blurb": "Opens like a book, left to right, and the layout fills the wider canvas." },
+  { "id": "android-foldable", "device": "fold1", "wash": 4, "fold": true, "openScreen": true, "lw": 960, "category": "Every screen · Foldable", "title": "Android foldable", "blurb": "Opens like a book, and the store reflows for the screen in your hand." },
+  { "id": "android-foldable-tall", "device": "fold2", "wash": 3, "fold": true, "openScreen": true, "lw": 760, "category": "Every screen · Foldable", "title": "Android foldable, tall", "blurb": "Even the tallest, narrowest screen gets a clean single column." },
+  { "id": "googlebook", "device": "gb", "wash": 1, "category": "Every screen · Laptop", "title": "Googlebook", "blurb": "Full width on a laptop that runs Android, with the same clean layout." }
+]

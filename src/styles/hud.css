@@ -1,0 +1,13 @@
+/* Fixed UI: top bar, progress, visit pill, next chevron, shared link styles. */
+.vlink{color:#0066cc;font-size:clamp(16px,1.5vw,20px);text-decoration:none;pointer-events:auto;margin-top:2px}
+.vlink:hover{text-decoration:underline}
+.visit{position:fixed;z-index:21;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translateX(-50%);background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-radius:980px;padding:11px 20px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none;box-shadow:0 8px 30px rgba(0,0,0,.18);opacity:0;pointer-events:none;transition:opacity .25s}
+.next{position:fixed;z-index:21;right:clamp(14px,2.4vw,30px);bottom:calc(env(safe-area-inset-bottom,0px) + 22px);width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 6px 22px rgba(0,0,0,.16);cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .6s,transform .3s}
+.next.in{opacity:1;pointer-events:auto}
+.next svg{width:18px;height:18px;fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.next.up svg{transform:rotate(180deg)}
+/* hud */
+.hud{position:fixed;z-index:20;left:0;right:0;top:0;display:flex;justify-content:space-between;padding:calc(env(safe-area-inset-top,0px) + 18px) clamp(16px,3vw,36px) 0;font-size:13px;font-weight:600;letter-spacing:-.005em;pointer-events:none;opacity:0;transition:opacity 1s}
+.hud.in{opacity:1}
+.hud span:last-child{color:var(--muted);font-weight:500}
+.progress{position:fixed;z-index:20;left:0;bottom:0;height:3px;width:100%;background:var(--ink);transform-origin:0 50%;transform:scaleX(0);opacity:.85}
